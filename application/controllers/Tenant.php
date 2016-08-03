@@ -131,6 +131,19 @@ class Tenant extends CI_Controller{
         $this->load->view('footer');
     }
 
+    public function print_barcode_delivery($dt_id){
+        $this->load->model('Delivery_model');
+        $packet['item_list'] = $this->Delivery_model->get_specific_delivery($dt_id); 
+        $packet['supp'] = $this->session->userdata('code');
+
+        $data['sessions'] = $this->session_name();
+        $data['category_list'] = $this->get_item_category();
+
+        $this->load->view('tenant-header', $data);
+        $this->load->view('item-barcode-delivery', $packet);
+        $this->load->view('footer');
+    }
+
     public function add_delivery(){
         /*$item_code = $this->input->post('item_code');
         $item_quantity = $this->input->post('item_quantity');

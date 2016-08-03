@@ -98,11 +98,17 @@
 				<div class="container">
 					<!--The overwatch Main element Container or MEC-->
 					<div class="overwatch-mec mec-income" style="min-height: 400px;">
-					<div class="col-xs-12 total-label total-label-bank">Delivery Transaction ID: -- <?php echo $dt_id; ?></div>
-					<div class="col-xs-7 total-label total-label-bank">Date Requested: <?php echo date("M j, Y", strtotime($dt_date)); ?> </div>
-					<div class="col-xs-5 total-label total-label-bank">Brand Name: <?php echo $dt_supplier; ?></div>
-					<div class="col-xs-7 total-label total-label-bank">Date Approved: <?php if($dt_approved=='0000-00-00'){echo "not yet approved";}else{echo date("M j, Y", strtotime($dt_approved));} ?> </div>
-					<div class="col-xs-5 total-label total-label-bank"><div id="print" onClick="printPage();" class="call-links">PRINT DELIVERY RECORDS</div></div>
+
+					<div class="col-xs-7">
+						<div class="total-label total-label-bank">Delivery Transaction ID: -- <?php echo $dt_id; ?></div>
+						<div class="total-label total-label-bank">Date Requested: <?php echo date("M j, Y", strtotime($dt_date)); ?> </div>
+						<div class="total-label total-label-bank">Date Approved: <?php if($dt_approved=='0000-00-00'){echo "not yet approved";}else{echo date("M j, Y", strtotime($dt_approved));} ?> </div>
+					</div>
+					<div class="col-xs-5">
+						<div class="col-xs-12 total-label total-label-bank">Brand Name: <?php echo $dt_supplier; ?></div>
+						<div class="col-xs-7 total-label total-label-bank"><div id="print" onClick="printPage();" class="call-links">PRINT DELIVERY RECORDS</div></div>
+						<div class="col-xs-5 total-label total-label-bank"><a class="call-links" href="<?php echo base_url(); ?>tenant/print-barcode-delivery/<?php echo $dt_id; ?>">PRINT BARCODE</a></div>
+					</div>
 
 						<div class="col-xs-12">
 							<!-- <div class="row">

@@ -110,6 +110,7 @@ $route['tenant/add-delivery-items'] = 'tenant/add_delivery_items';
 $route['tenant/remove-delivery-item'] = 'tenant/remove_delivery_item';
 $route['tenant/edit-delivery-item'] = 'tenant/edit_delivery_item';
 $route['tenant/print-barcode/(:any)'] = 'tenant/print_barcode/$1';
+$route['tenant/print-barcode-delivery/(:any)'] = 'tenant/print_barcode_delivery/$1';
 $route['tenant/report-delivery'] = 'tenant/view_delivery';
 $route['tenant/view-dt-details/(:any)'] = 'tenant/view-dt-details/$1';
 $route['tenant/report-pullout'] = 'tenant/view_pullout';

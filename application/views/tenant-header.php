@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 	<head>
-		<title>EIGHT DISTRICT Boutique</title>
+		<title>EIGHT DISTRICT</title>
 
 		<!-- FOR ACCORDION CSS -->
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/accordion.css">
